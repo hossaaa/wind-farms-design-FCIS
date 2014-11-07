@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+input:hover
+{
+	color:#09C;
+	background:#336699;
+	font:Verdana, Geneva, sans-serif;}
+Div:hover
+{
+
+background:#99CC00;
+}
+Div
+{ position:fixed;
+background:#FFF;
+    top: 40%;
+    left: 40%;
+    
+     /*set to a negative number 1/2 of your width*/
+	}
+</style>
+<script type="text/javascript" name="operations" >
+function operations(op)
+{
+var num1,num2;
+num1=document.getElementById('num1').value;
+num2=document.getElementById('num2').value;
+if(num1.length <1 || num2.length<1)
+{	alert("empty fields :P ");}
+else if(! Number(num1) || !Number(num2))
+	{
+
+	alert("enter valid data ;) ");
+	}
+
+else 
+{
+	
+	{
+		if(op == "ADD")
+		{document.getElementById('res').value=Number(num1)+Number(num2);}
+		else if (op== "SUB")
+		{document.getElementById('res').value=Number(num1)-Number(num2);}
+		else if (op== "MUL")
+		{document.getElementById('res').value=Number(num1) * Number(num2);}
+		else if (op== "DIV")
+		{document.getElementById('res').value=Number(num1) / Number(num2);}
+		else if (op== "MOD")
+		{document.getElementById('res').value=Number(num1)% Number(num2);}
+		else
+		{}
+	}
+}	
+}
+
+</script>
+
+<title>Untitled Document</title>
+</head>
+
+<body style="background:#999">
+<div>
+<p>
+  <label> View plainPrint?</label>
+  <br/>
+  <label> number 1: 
+    <input name="number1"  id="num1"type="text" />
+  </label>
+  <br/>
+  <label> number 2:
+    <input name="number2" id="num2"type="text" />
+  </label>
+  <br/>
+ 
+  <input type="button" name="ADD" value="ADD" onclick="operations(this.name)" />
+  <input type="button" name="MUL" value="MUL"  onclick="operations(this.name)"/>
+  <input type="button" name="SUB" value="SUB" onclick="operations(this.name)" />
+  <input type="button" name="DIV" value="DIV"  onclick="operations(this.name)"/>
+    <input type="button" name="MOD" value="MOD"  onclick="operations(this.name)"/>
+   <br/>
+   <label> Get Result :
+   <input name="result" id="res" type="text" readonly />
+  </label>
+
+ 
+</p>
+</div>
+</body>
+</html>
