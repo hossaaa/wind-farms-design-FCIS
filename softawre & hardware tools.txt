@@ -1,0 +1,9 @@
+Software
+ODBC
+database servers
+
+online functionality
+map within GPS
+
+hardware 
+Processor, Memory,Graphics and Screen Resolution,Disk space,ports (computer)
